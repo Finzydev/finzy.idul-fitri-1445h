@@ -1,0 +1,113 @@
+body {
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+p{
+    font-size: 3vw;
+    background-color: black;
+    padding: 4px;
+    border-radius: 20px;;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+.text-animate {
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 1.0s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.image-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.text-center {
+    width: max-content;
+    margin: 40px auto 0 auto;
+    text-shadow: 2px 2px rgb(15, 15, 15);
+}
+
+.next {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #0b0c0e; /* Mengatur border pada tombol */
+    background-color: transparent; /* Menghapus warna latar belakang */
+    color: #f8f8f8; /* Warna teks tombol */
+    cursor: pointer;
+    position: relative; /* Mengatur posisi tombol */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Efek transisi pada perubahan warna teks, transformasi, dan latar belakang */
+}
+
+/* Efek hover */
+.next::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Mengatur jarak atas efek dari tombol */
+    left: -5px; /* Mengatur jarak kiri efek dari tombol */
+    right: -5px; /* Mengatur jarak kanan efek dari tombol */
+    bottom: -5px; /* Mengatur jarak bawah efek dari tombol */
+    border: 2px solid #eff313; /* Mengatur border efek */
+    transition: opacity 0.3s ease; /* Efek transisi pada opacity */
+    opacity: 0; /* Awalnya efek tidak terlihat */
+}
+
+.next:hover::before {
+    opacity: 1; /* Efek terlihat saat hover */
+}
+
+.next:hover {
+    color: #fff; /* Warna teks saat hover */
+    background-color: #000000; /* Warna latar belakang saat hover */
+    transform: translateY(-2px); /* Menggeser tombol ke atas saat hover */
+}
+footer {
+    text-align: right; /* Mengatur align teks menjadi center */
+    margin-top: 20px; /* Mengatur margin atas untuk memberikan jarak */
+    padding-right: 100px;
+}
+
+footer h4 {
+    margin-bottom: 10px; /* Mengatur margin bawah untuk memberikan jarak antara judul dan link */
+}
+footer a {
+    display: block; /* Mengubah link menjadi blok agar dapat diatur margin-nya */
+    margin-bottom: 5px; /* Mengatur margin bawah pada link */
+    text-decoration: none;
+    color: white;
+}
